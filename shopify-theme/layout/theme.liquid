@@ -40,7 +40,13 @@
   {% section 'header' %}
   {{ content_for_layout }}
   {% section 'footer' %}
+  {% section 'cart-drawer' %}
 
+  <script>
+    window.NutriGlen = {
+      freeShippingThreshold: {{ settings.free_shipping_threshold | default: 50 | times: 100 }}
+    };
+  </script>
   {{ 'main.js' | asset_url | script_tag }}
 </body>
 </html>
