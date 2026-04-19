@@ -1,0 +1,126 @@
+/* ── NutriGlen custom styles ── */
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hero background */
+.hero-gradient {
+  background: linear-gradient(150deg, #0f3d20 0%, #14532d 40%, #1a6b38 70%, #0f3d20 100%);
+}
+
+/* Gradient heading text */
+.gradient-text {
+  background: linear-gradient(135deg, #16a34a 0%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section accent divider */
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #16a34a, #d97706);
+  border-radius: 2px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Star color */
+.stars { color: #f59e0b; }
+
+/* Hover lift + shadow for cards */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Product bottle glow */
+.bottle-glow {
+  filter: drop-shadow(0 0 40px rgba(22, 163, 74, 0.45));
+}
+
+/* Nav link underline animation */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: #16a34a;
+  transition: width 0.2s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* Navbar scroll state (class toggled by main.js) */
+#site-header.scrolled {
+  background: white;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+}
+#site-header.scrolled .nav-link      { color: #374151; }
+#site-header.scrolled .nav-link:hover{ color: #15803d; }
+#site-header.scrolled .header-logo   { color: #14532d; }
+#site-header.scrolled .cart-icon     { color: #374151; }
+#site-header.scrolled .hamburger-btn { color: #374151; }
+
+/* Cart badge */
+.cart-badge {
+  position: absolute;
+  top: -6px; right: -6px;
+  width: 18px; height: 18px;
+  background: #16a34a;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FAQ accordion */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s ease;
+}
+.faq-answer.open {
+  max-height: 300px;
+}
+.faq-icon { transition: transform 0.25s ease; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* Quantity selector active */
+.qty-btn.active {
+  border-color: #16a34a;
+  background: #f0fdf4;
+}
+
+/* Add to cart button states */
+#atc-btn.added {
+  background: #15803d;
+  transform: scale(0.97);
+}
+
+/* Wave divider */
+.wave-divider svg { display: block; }
+
+/* Rating bar */
+.rating-bar {
+  flex: 1;
+  height: 10px;
+  background: #f3f4f6;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.rating-bar-fill {
+  height: 100%;
+  background: #f59e0b;
+  border-radius: 99px;
+}

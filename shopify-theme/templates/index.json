@@ -1,0 +1,112 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "badge_text": "#1 Trusted Vitamin Supplement",
+        "heading_line1": "Fuel Your Body With",
+        "heading_highlight": "K2 + D3",
+        "heading_line2": "The Power Duo",
+        "subheading": "Scientifically formulated Vitamin K2 (MK-7) paired with Vitamin D3 to promote bone density, heart health, and immune strength — naturally.",
+        "cta_primary": "Get Started Today",
+        "cta_secondary": "Learn More"
+      }
+    },
+    "trust-bar": {
+      "type": "trust-bar",
+      "settings": {}
+    },
+    "benefits": {
+      "type": "benefits",
+      "block_order": ["benefit-1", "benefit-2", "benefit-3", "benefit-4"],
+      "blocks": {
+        "benefit-1": {
+          "type": "benefit",
+          "settings": {
+            "title": "Heart Health",
+            "description": "Vitamin K2 directs calcium away from arteries and into bones, reducing arterial calcification and supporting healthy cardiovascular function."
+          }
+        },
+        "benefit-2": {
+          "type": "benefit",
+          "settings": {
+            "title": "Bone Strength",
+            "description": "D3 boosts calcium absorption while K2 ensures it reaches your bones. Together they deliver unmatched support for bone density and skeletal health."
+          }
+        },
+        "benefit-3": {
+          "type": "benefit",
+          "settings": {
+            "title": "Immune Support",
+            "description": "Vitamin D3 is critical for activating immune defenses. Optimal D3 levels are linked to stronger immune responses and reduced inflammation."
+          }
+        },
+        "benefit-4": {
+          "type": "benefit",
+          "settings": {
+            "title": "Energy & Mood",
+            "description": "Vitamin D3 receptors are present in brain tissue and play a key role in serotonin production, helping maintain energy levels and a positive mood."
+          }
+        }
+      }
+    },
+    "featured-product": {
+      "type": "featured-product",
+      "settings": {
+        "featured_product": ""
+      }
+    },
+    "how-it-works": {
+      "type": "how-it-works",
+      "settings": {}
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "block_order": ["review-1", "review-2", "review-3", "review-4", "review-5", "review-6"],
+      "blocks": {
+        "review-1": { "type": "review", "settings": { "title": "My bones feel stronger than ever",        "body": "I started taking NutriGlen K2+D3 after my doctor mentioned my bone density was declining. After 3 months, my follow-up scan showed measurable improvement.",   "name": "Sarah M.",  "location": "Austin, TX",  "duration": "12 weeks in" } },
+        "review-2": { "type": "review", "settings": { "title": "Energy levels completely transformed",    "body": "I've been deficient in D3 for years. Within 3 weeks of NutriGlen I noticed I was waking up without that foggy feeling. Energy is the best it's been in a decade.", "name": "James R.",  "location": "Denver, CO",  "duration": "8 weeks in"  } },
+        "review-3": { "type": "review", "settings": { "title": "My cardiologist was impressed",           "body": "My cardiologist mentioned my arterial health markers improved significantly. I credit NutriGlen. The formulation is clean, no fillers, easy to swallow.",        "name": "Linda K.",  "location": "Seattle, WA", "duration": "6 months in" } },
+        "review-4": { "type": "review", "settings": { "title": "Finally a K2+D3 that works",              "body": "I tried three different brands before NutriGlen. This is the only one where I've noticed a real difference — less joint aching and better sleep.",              "name": "Marcus T.", "location": "Chicago, IL", "duration": "10 weeks in" } },
+        "review-5": { "type": "review", "settings": { "title": "My go-to supplement",                     "body": "The shipping is fast, packaging is premium, and IT WORKS. My seasonal mood dips are gone. Ingredients are exactly what research recommends.",                  "name": "Anna P.",   "location": "Miami, FL",   "duration": "5 months in" } },
+        "review-6": { "type": "review", "settings": { "title": "Skeptic turned believer",                 "body": "Bloodwork confirmed my D3 went from deficient to optimal and calcium absorption improved. The K2+D3 combination is genuinely smart science.",                   "name": "Derek W.",  "location": "Phoenix, AZ", "duration": "4 months in" } }
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "block_order": ["faq-1","faq-2","faq-3","faq-4","faq-5","faq-6","faq-7","faq-8"],
+      "blocks": {
+        "faq-1": { "type": "faq_item", "settings": { "question": "What is the difference between K1 and K2?",      "answer": "Vitamin K1 is primarily involved in blood clotting. Vitamin K2 (MK-7 form) targets bone and cardiovascular tissue, directing calcium into bones and away from arteries." } },
+        "faq-2": { "type": "faq_item", "settings": { "question": "Why D3 and not D2?",                             "answer": "D3 (cholecalciferol) is the form your body naturally produces from sunlight and is far superior at raising blood vitamin D levels. Studies show D3 is roughly 87% more potent than D2." } },
+        "faq-3": { "type": "faq_item", "settings": { "question": "How long until I see results?",                  "answer": "Many customers notice improved energy and mood within 2–3 weeks. Bone density and cardiovascular benefits are more gradual — most see noticeable changes after 8–12 weeks." } },
+        "faq-4": { "type": "faq_item", "settings": { "question": "Is 5,000 IU of Vitamin D3 safe?",               "answer": "5,000 IU is a common clinical dose for D-deficient adults, well within the established safe range (upper limit: 10,000 IU/day). Consult your healthcare provider if you have medical conditions." } },
+        "faq-5": { "type": "faq_item", "settings": { "question": "Are there any side effects?",                    "answer": "NutriGlen K2+D3 is well-tolerated by most adults. If you take blood-thinning medications (like warfarin), consult your doctor before taking K2, as it can affect clotting time." } },
+        "faq-6": { "type": "faq_item", "settings": { "question": "Is NutriGlen suitable for vegans?",             "answer": "Our current formulation uses gelatin softgels and is not vegan. We use organic olive oil as the carrier base. A vegan-certified capsule version is in development." } },
+        "faq-7": { "type": "faq_item", "settings": { "question": "What is your return policy?",                    "answer": "We offer a 30-day money-back guarantee. Return within 30 days of purchase for a full refund — no questions asked." } },
+        "faq-8": { "type": "faq_item", "settings": { "question": "How should I store my NutriGlen supplements?",  "answer": "Store in a cool, dry place away from direct sunlight. Do not refrigerate. Keep out of reach of children. Recommended storage: 59–77°F (15–25°C)." } }
+      }
+    },
+    "cta-banner": {
+      "type": "cta-banner",
+      "settings": {
+        "eyebrow": "Limited Time Offer",
+        "heading_before": "Start Your Journey to",
+        "heading_highlight": "Better Health",
+        "heading_after": "Today",
+        "subheading": "Join over 2,400 customers who have transformed their bone health, heart health, and energy levels with NutriGlen K2 + D3.",
+        "cta_primary": "Shop Now — From $39.99",
+        "cta_secondary": "Learn the Science"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "trust-bar",
+    "benefits",
+    "featured-product",
+    "how-it-works",
+    "testimonials",
+    "faq",
+    "cta-banner"
+  ]
+}

@@ -1,0 +1,95 @@
+<section id="reviews" class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16">
+      <span class="inline-block text-green-600 font-semibold text-sm uppercase tracking-widest mb-3">Real Results</span>
+      <div class="section-divider"></div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">What Our Customers Say</h2>
+      <div class="flex items-center justify-center gap-3 mt-4">
+        <div class="stars text-2xl">★★★★★</div>
+        <span class="text-gray-600 text-lg"><strong class="text-gray-900">4.9 out of 5</strong> · 2,400+ verified reviews</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      {% for block in section.blocks %}
+        <div class="card-hover bg-white rounded-3xl p-7 shadow-sm border border-gray-100 flex flex-col gap-4" {{ block.shopify_attributes }}>
+          <div class="flex items-center justify-between">
+            <div class="stars text-base">★★★★★</div>
+            <span class="flex items-center gap-1 text-xs text-green-700 bg-green-50 px-2.5 py-1 rounded-full font-medium">
+              <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Verified Purchase
+            </span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-2">{{ block.settings.title }}</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">&ldquo;{{ block.settings.body }}&rdquo;</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 mt-auto">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 bg-green-600">
+                {{ block.settings.name | slice: 0 }}{{ block.settings.name | split: " " | last | slice: 0 }}
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900 text-sm">{{ block.settings.name }}</div>
+                <div class="text-gray-400 text-xs">{{ block.settings.location }}</div>
+              </div>
+            </div>
+            <div class="text-xs text-gray-400 italic">{{ block.settings.duration }}</div>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+    <!-- Rating breakdown -->
+    <div class="mt-12 bg-white rounded-3xl shadow-sm border border-gray-100 p-8 max-w-2xl mx-auto">
+      <h3 class="text-center font-bold text-gray-900 text-xl mb-6">Rating Breakdown</h3>
+      {% assign ratings = "92,5,2,0.5,0.5" | split: "," %}
+      {% for pct in ratings %}
+        {% assign star = 5 | minus: forloop.index0 %}
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-sm text-gray-600 w-8 text-right">{{ star }}★</span>
+          <div class="rating-bar"><div class="rating-bar-fill" style="width:{{ pct }}%"></div></div>
+          <span class="text-sm text-gray-500 w-8">{{ pct }}%</span>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        { "type": "text",     "id": "title",    "label": "Review title",  "default": "Amazing product!" },
+        { "type": "textarea", "id": "body",     "label": "Review text",   "default": "I noticed a real difference within weeks. Energy is up and my doctor was impressed with my blood work." },
+        { "type": "text",     "id": "name",     "label": "Customer name", "default": "Sarah M." },
+        { "type": "text",     "id": "location", "label": "Location",      "default": "Austin, TX" },
+        { "type": "text",     "id": "duration", "label": "Time using",    "default": "12 weeks in" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        { "type": "review", "settings": { "title": "My bones feel stronger than ever",        "body": "I started taking NutriGlen K2+D3 after my doctor mentioned my bone density was declining. After 3 months, my follow-up scan showed measurable improvement. My doctor was genuinely impressed.",   "name": "Sarah M.",  "location": "Austin, TX",   "duration": "12 weeks in" } },
+        { "type": "review", "settings": { "title": "Energy levels completely transformed",     "body": "I've been deficient in D3 for years. Within 3 weeks of NutriGlen I noticed I was waking up without that foggy feeling. Now 2 months in and my energy is the best it's been in a decade.",        "name": "James R.",  "location": "Denver, CO",   "duration": "8 weeks in" } },
+        { "type": "review", "settings": { "title": "Heart check-up results surprised my cardiologist", "body": "My cardiologist mentioned my arterial health markers improved significantly. I've been taking K2+D3 consistently and credit NutriGlen. The formulation is clean, no fillers, easy to swallow.", "name": "Linda K.",  "location": "Seattle, WA",  "duration": "6 months in" } },
+        { "type": "review", "settings": { "title": "Finally found a K2+D3 that actually works", "body": "I tried three different brands before NutriGlen. This is the only one where I've noticed a real difference — less joint aching after workouts, better sleep, and my mood has leveled out.",     "name": "Marcus T.", "location": "Chicago, IL",  "duration": "10 weeks in" } },
+        { "type": "review", "settings": { "title": "My go-to supplement — reorder every month", "body": "The shipping is fast, packaging is premium, and most importantly IT WORKS. My seasonal mood dips are gone. The ingredients list is clean — MK-7 K2 and cholecalciferol D3, exactly right.",      "name": "Anna P.",   "location": "Miami, FL",    "duration": "5 months in" } },
+        { "type": "review", "settings": { "title": "Skeptic turned believer",                  "body": "I was skeptical but my wife convinced me to try. After bloodwork confirmed my D3 went from deficient to optimal and my calcium absorption improved, I'm a convert. Genuinely smart science.",        "name": "Derek W.",  "location": "Phoenix, AZ",  "duration": "4 months in" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

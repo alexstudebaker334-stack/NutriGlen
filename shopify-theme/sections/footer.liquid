@@ -1,0 +1,113 @@
+<footer class="bg-gray-950 text-gray-400">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <!-- Brand -->
+      <div class="col-span-2 lg:col-span-1">
+        <a href="{{ routes.root_url }}" class="flex items-center gap-2 mb-4">
+          <div class="w-9 h-9 rounded-full bg-green-600 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z" fill="white"/>
+            </svg>
+          </div>
+          <span class="font-bold text-xl text-white">Nutri<span class="text-green-400">Glen</span></span>
+        </a>
+        <p class="text-sm text-gray-500 leading-relaxed mb-5">
+          Premium supplements formulated with science-backed ingredients for real, measurable results.
+        </p>
+        <!-- Social -->
+        <div class="flex gap-3">
+          {% if section.settings.instagram_url != blank %}
+            <a href="{{ section.settings.instagram_url }}" aria-label="Instagram"
+               class="w-9 h-9 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/>
+              </svg>
+            </a>
+          {% endif %}
+          {% if section.settings.facebook_url != blank %}
+            <a href="{{ section.settings.facebook_url }}" aria-label="Facebook"
+               class="w-9 h-9 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+          {% endif %}
+          {% if section.settings.tiktok_url != blank %}
+            <a href="{{ section.settings.tiktok_url }}" aria-label="TikTok"
+               class="w-9 h-9 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9a8.16 8.16 0 004.77 1.53V7.1a4.85 4.85 0 01-1-.41z"/>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Product links -->
+      <div>
+        <div class="text-white font-semibold text-sm uppercase tracking-widest mb-4">Product</div>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#product"      class="hover:text-green-400 transition-colors">Vitamin K2 + D3</a></li>
+          <li><a href="#product"      class="hover:text-green-400 transition-colors">Ingredients</a></li>
+          <li><a href="#product"      class="hover:text-green-400 transition-colors">Supplement Facts</a></li>
+          <li><a href="#how-it-works" class="hover:text-green-400 transition-colors">How to Use</a></li>
+        </ul>
+      </div>
+
+      <!-- Support links -->
+      <div>
+        <div class="text-white font-semibold text-sm uppercase tracking-widest mb-4">Support</div>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#faq"                                      class="hover:text-green-400 transition-colors">FAQ</a></li>
+          <li><a href="mailto:{{ section.settings.support_email }}" class="hover:text-green-400 transition-colors">Contact Us</a></li>
+          <li><a href="{{ pages['shipping-policy'].url | default: '#' }}"  class="hover:text-green-400 transition-colors">Shipping Policy</a></li>
+          <li><a href="{{ pages['refund-policy'].url | default: '#' }}"    class="hover:text-green-400 transition-colors">Return Policy</a></li>
+          <li><a href="{{ pages['privacy-policy'].url | default: '#' }}"   class="hover:text-green-400 transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Email signup -->
+      <div>
+        <div class="text-white font-semibold text-sm uppercase tracking-widest mb-4">Newsletter</div>
+        <p class="text-sm text-gray-500 mb-4">Get 15% off your first order when you join our list.</p>
+        <form action="{{ routes.root_url }}#newsletter" method="post" class="flex gap-2">
+          <input type="hidden" name="form_type" value="customer">
+          <input type="hidden" name="utf8" value="✓">
+          <input type="email" name="contact[email]" placeholder="Your email"
+                 class="flex-1 min-w-0 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-green-500 transition-colors">
+          <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">Join</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-800 pt-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-gray-600 text-center sm:text-left">
+          &copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.
+        </p>
+        <p class="text-xs text-gray-700 text-center sm:text-right max-w-xl">
+          * These statements have not been evaluated by the Food and Drug Administration.
+          This product is not intended to diagnose, treat, cure, or prevent any disease.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "support_email",  "label": "Support email",   "default": "support@nutriglenplus.com" },
+    { "type": "url",  "id": "instagram_url",  "label": "Instagram URL" },
+    { "type": "url",  "id": "facebook_url",   "label": "Facebook URL" },
+    { "type": "url",  "id": "tiktok_url",     "label": "TikTok URL" }
+  ],
+  "presets": [{ "name": "Footer" }]
+}
+{% endschema %}
