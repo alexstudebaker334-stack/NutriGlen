@@ -2,10 +2,38 @@
   {
     "name": "theme_info",
     "theme_name": "NutriGlen",
-    "theme_version": "1.0.0",
+    "theme_version": "1.1.0",
     "theme_author": "NutriGlen",
     "theme_documentation_url": "",
     "theme_support_url": ""
+  },
+  {
+    "name": "Logo",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image",
+        "info": "Upload your NutriGlen logo here. For best results on the dark hero header, use a white or light-coloured PNG with a transparent background."
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width",
+        "min": 60,
+        "max": 240,
+        "step": 10,
+        "unit": "px",
+        "label": "Logo max width",
+        "default": 150
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_invert_on_dark",
+        "label": "Auto-invert logo on dark header",
+        "default": false,
+        "info": "Turn on if your logo is dark and becomes invisible on the hero section."
+      }
+    ]
   },
   {
     "name": "Colors",
@@ -21,6 +49,18 @@
         "id": "color_accent",
         "label": "Accent (amber)",
         "default": "#d97706"
+      }
+    ]
+  },
+  {
+    "name": "Shipping",
+    "settings": [
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free shipping threshold ($)",
+        "default": 50,
+        "info": "Orders above this amount qualify for free shipping. Used in the cart progress bar."
       }
     ]
   },
