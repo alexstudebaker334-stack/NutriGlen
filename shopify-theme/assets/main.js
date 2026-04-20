@@ -151,19 +151,6 @@ document.querySelectorAll('.faq-item').forEach(function (item) {
       });
   });
 
-  // Buy Now
-  document.getElementById('buy-now-btn')?.addEventListener('click', function () {
-    var varId = parseInt(document.getElementById('variant-id')?.value, 10);
-    var qty   = parseInt(document.getElementById('quantity-input')?.value || 1, 10);
-    if (!varId) return;
-
-    fetch('/cart/add.js', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: varId, quantity: qty })
-    })
-    .then(function () { window.location.href = '/checkout'; });
-  });
 })();
 
 

@@ -1,6 +1,6 @@
 <footer class="bg-gray-950 text-gray-400">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
 
       <!-- Brand -->
       <div class="col-span-2 lg:col-span-1">
@@ -62,24 +62,12 @@
         <div class="text-white font-semibold text-sm uppercase tracking-widest mb-4">Support</div>
         <ul class="space-y-2.5 text-sm">
           <li><a href="#faq"                                      class="hover:text-green-400 transition-colors">FAQ</a></li>
-          <li><a href="mailto:{{ section.settings.support_email }}" class="hover:text-green-400 transition-colors">Contact Us</a></li>
+          <li><a href="/pages/contact"                            class="hover:text-green-400 transition-colors">Contact Us</a></li>
+          <li><a href="/pages/about"                              class="hover:text-green-400 transition-colors">About</a></li>
           <li><a href="{{ pages['shipping-policy'].url | default: '#' }}"  class="hover:text-green-400 transition-colors">Shipping Policy</a></li>
           <li><a href="{{ pages['refund-policy'].url | default: '#' }}"    class="hover:text-green-400 transition-colors">Return Policy</a></li>
-          <li><a href="{{ pages['privacy-policy'].url | default: '#' }}"   class="hover:text-green-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="/pages/privacy-policy"                     class="hover:text-green-400 transition-colors">Privacy Policy</a></li>
         </ul>
-      </div>
-
-      <!-- Email signup -->
-      <div>
-        <div class="text-white font-semibold text-sm uppercase tracking-widest mb-4">Newsletter</div>
-        <p class="text-sm text-gray-500 mb-4">Get 15% off your first order when you join our list.</p>
-        <form action="{{ routes.root_url }}#newsletter" method="post" class="flex gap-2">
-          <input type="hidden" name="form_type" value="customer">
-          <input type="hidden" name="utf8" value="✓">
-          <input type="email" name="contact[email]" placeholder="Your email"
-                 class="flex-1 min-w-0 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-green-500 transition-colors">
-          <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">Join</button>
-        </form>
       </div>
 
     </div>
@@ -103,7 +91,7 @@
 {
   "name": "Footer",
   "settings": [
-    { "type": "text", "id": "support_email",  "label": "Support email",   "default": "support@nutriglenplus.com" },
+    { "type": "text", "id": "support_email",  "label": "Support email",   "default": "alexstudebaker334@gmail.com" },
     { "type": "url",  "id": "instagram_url",  "label": "Instagram URL" },
     { "type": "url",  "id": "facebook_url",   "label": "Facebook URL" },
     { "type": "url",  "id": "tiktok_url",     "label": "TikTok URL" }
