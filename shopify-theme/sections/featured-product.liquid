@@ -100,7 +100,7 @@
         </ul>
 
         <!-- Quantity + price tiers -->
-        {%- assign base_price = product.price | default: 3999 -%}
+        {%- assign base_price = product.price | default: 2099 -%}
         <div class="bg-white border border-gray-200 rounded-2xl p-6 space-y-4">
           <div class="font-semibold text-gray-900">Select Quantity</div>
           <div class="grid grid-cols-3 gap-3">
@@ -153,10 +153,6 @@
                 <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.3 2.3c-.6.6-.2 1.7.7 1.7H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
               </svg>
               <span id="atc-label">Add to Cart — {{ base_price | money }}</span>
-            </button>
-            <button type="button" id="buy-now-btn"
-              class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold text-lg py-4 rounded-full transition-all shadow-xl hover:-translate-y-1">
-              Buy Now
             </button>
           </div>
         </form>

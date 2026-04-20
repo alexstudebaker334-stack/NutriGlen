@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "privacy-policy": {
+      "type": "page-privacy-policy",
+      "settings": {}
+    }
+  },
+  "order": ["privacy-policy"]
+}
