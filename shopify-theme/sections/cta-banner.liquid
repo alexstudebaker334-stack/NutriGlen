@@ -1,28 +1,23 @@
-<section class="py-20 hero-gradient relative overflow-hidden">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-green-600/20 blur-3xl"></div>
-    <div class="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-amber-500/10 blur-3xl"></div>
-  </div>
+<section class="py-24 bg-zinc-950 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 50% 100%, rgba(34,197,94,.08) 0%, transparent 60%);"></div>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-    <span class="inline-block text-green-400 font-semibold text-sm uppercase tracking-widest mb-4">
-      {{ section.settings.eyebrow }}
-    </span>
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
-      {{ section.settings.heading_before }}
-      <span class="text-amber-400">{{ section.settings.heading_highlight }}</span>
+    <span class="section-label">{{ section.settings.eyebrow }}</span>
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight">
+      {{ section.settings.heading_before }}<br>
+      <span class="text-green-400">{{ section.settings.heading_highlight }}</span>
       {{ section.settings.heading_after }}
     </h2>
-    <p class="text-green-100 text-lg mb-10 max-w-2xl mx-auto">{{ section.settings.subheading }}</p>
+    <p class="text-zinc-500 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">{{ section.settings.subheading }}</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#product" class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-10 py-4 rounded-full text-lg shadow-2xl transition-all hover:-translate-y-1">
+      <a href="#product" class="btn-primary text-lg px-10 py-4 rounded-md">
         {{ section.settings.cta_primary }}
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#benefits" class="inline-flex items-center justify-center gap-2 border-2 border-green-400 text-green-300 hover:bg-green-400/10 font-semibold px-10 py-4 rounded-full text-lg transition-all">
+      <a href="#benefits" class="btn-secondary text-lg px-10 py-4 rounded-md">
         {{ section.settings.cta_secondary }}
       </a>
     </div>
-    <p class="text-green-300 text-sm mt-8">
+    <p class="text-zinc-600 text-xs mt-8 uppercase tracking-wider">
       ✓ 30-Day Money-Back Guarantee &nbsp;·&nbsp; ✓ Free Shipping on Orders $50+ &nbsp;·&nbsp; ✓ Non-GMO
     </p>
   </div>
@@ -32,13 +27,13 @@
 {
   "name": "CTA Banner",
   "settings": [
-    { "type": "text",     "id": "eyebrow",            "label": "Eyebrow",           "default": "Limited Time Offer" },
-    { "type": "text",     "id": "heading_before",     "label": "Heading before",    "default": "Start Your Journey to" },
-    { "type": "text",     "id": "heading_highlight",  "label": "Heading highlight", "default": "Better Health" },
-    { "type": "text",     "id": "heading_after",      "label": "Heading after",     "default": "Today" },
-    { "type": "textarea", "id": "subheading",         "label": "Subheading",        "default": "Join over 2,400 customers who have transformed their bone health, heart health, and energy levels with NutriGlen K2 + D3." },
-    { "type": "text",     "id": "cta_primary",        "label": "Primary CTA",       "default": "Shop Now — From $39.99" },
-    { "type": "text",     "id": "cta_secondary",      "label": "Secondary CTA",     "default": "Learn the Science" }
+    { "type": "text",     "id": "eyebrow",           "label": "Eyebrow",           "default": "Limited Time Offer" },
+    { "type": "text",     "id": "heading_before",    "label": "Heading before",    "default": "Start Your Journey to" },
+    { "type": "text",     "id": "heading_highlight", "label": "Heading highlight", "default": "Better Health" },
+    { "type": "text",     "id": "heading_after",     "label": "Heading after",     "default": "Today" },
+    { "type": "textarea","id": "subheading",         "label": "Subheading",        "default": "Join over 2,400 customers who have transformed their bone health, heart health, and energy levels with NutriGlen K2 + D3." },
+    { "type": "text",    "id": "cta_primary",        "label": "Primary CTA",       "default": "Shop Now — $20.99" },
+    { "type": "text",    "id": "cta_secondary",      "label": "Secondary CTA",     "default": "Learn the Science" }
   ],
   "presets": [{ "name": "CTA Banner" }]
 }

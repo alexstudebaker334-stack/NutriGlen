@@ -1,68 +1,65 @@
 {%- assign product = section.settings.featured_product -%}
 
-<section id="product" class="py-24 bg-gray-50">
+<section id="product" class="py-24 bg-zinc-950">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <div class="text-center mb-16">
-      <span class="inline-block text-green-600 font-semibold text-sm uppercase tracking-widest mb-3">Our Product</span>
-      <div class="section-divider"></div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">NutriGlen Vitamin K2 + D3</h2>
-      <p class="text-gray-500 text-lg max-w-xl mx-auto">
-        Premium capsules with MK-7 form of K2 and cholecalciferol D3 — the most bioavailable forms available.
+      <span class="section-label">Our Product</span>
+      <h2 class="text-4xl sm:text-5xl font-black text-white mb-4 tracking-tight">NutriGlen<br><span class="text-green-400">Vitamin K2 + D3</span></h2>
+      <p class="text-zinc-500 text-lg max-w-xl mx-auto">
+        MK-7 form of K2 and cholecalciferol D3 — the most bioavailable forms, clinically dosed.
       </p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-16 items-start">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
       <!-- Bottle visual -->
-      <div class="lg:sticky lg:top-24">
-        <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-12 flex flex-col items-center gap-6">
-
+      <div class="lg:sticky lg:top-28">
+        <div class="dark-card p-10 flex flex-col items-center gap-6">
           {%- if product != blank and product.featured_image -%}
             <img src="{{ product.featured_image | image_url: width: 400 }}"
                  alt="{{ product.featured_image.alt | escape }}"
-                 class="w-64 object-contain drop-shadow-2xl bottle-glow"
+                 class="w-56 object-contain drop-shadow-2xl bottle-glow"
                  loading="lazy">
           {%- else -%}
-            <svg viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg" class="w-56 drop-shadow-2xl bottle-glow">
-              <rect x="75" y="10" width="50" height="30" rx="6" fill="#166534"/>
-              <rect x="70" y="36" width="60" height="10" rx="4" fill="#15803d"/>
-              <rect x="72" y="44" width="56" height="28" rx="4" fill="#f0fdf4"/>
-              <rect x="30" y="70" width="140" height="250" rx="16" fill="#f0fdf4"/>
-              <rect x="36" y="80" width="128" height="234" rx="12" fill="white"/>
+            <svg viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg" class="w-48 bottle-glow drop-shadow-2xl">
+              <rect x="75" y="10" width="50" height="30" rx="6" fill="#111"/>
+              <rect x="70" y="36" width="60" height="10" rx="4" fill="#1a1a1a"/>
+              <rect x="72" y="44" width="56" height="28" rx="4" fill="#0d0d0d"/>
+              <rect x="30" y="70" width="140" height="250" rx="16" fill="#111"/>
+              <rect x="36" y="80" width="128" height="234" rx="12" fill="#0d0d0d"/>
               <rect x="36" y="80" width="128" height="70" rx="12" fill="#16a34a"/>
               <rect x="36" y="135" width="128" height="15" fill="#16a34a"/>
               <text x="100" y="108" text-anchor="middle" fill="white" font-size="13" font-weight="bold" font-family="Arial">NutriGlen</text>
-              <rect x="60" y="113" width="80" height="1.5" fill="rgba(255,255,255,0.4)"/>
+              <rect x="60" y="113" width="80" height="1.5" fill="rgba(255,255,255,0.2)"/>
               <text x="100" y="128" text-anchor="middle" fill="#bbf7d0" font-size="8" font-family="Arial" letter-spacing="2">PREMIUM SUPPLEMENTS</text>
-              <text x="100" y="175" text-anchor="middle" fill="#14532d" font-size="15" font-weight="bold" font-family="Arial">VITAMIN</text>
-              <text x="100" y="197" text-anchor="middle" fill="#16a34a" font-size="22" font-weight="bold" font-family="Arial">K2 + D3</text>
-              <line x1="52" y1="208" x2="148" y2="208" stroke="#e5e7eb" stroke-width="1"/>
-              <text x="100" y="225" text-anchor="middle" fill="#6b7280" font-size="7.5" font-family="Arial">Bone Strength &#8226; Heart Health</text>
-              <text x="100" y="238" text-anchor="middle" fill="#6b7280" font-size="7.5" font-family="Arial">Immune Support</text>
-              <rect x="62" y="248" width="76" height="22" rx="11" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
-              <text x="100" y="263" text-anchor="middle" fill="#16a34a" font-size="9" font-weight="bold" font-family="Arial">60 CAPSULES</text>
-              <text x="100" y="308" text-anchor="middle" fill="#9ca3af" font-size="6.5" font-family="Arial">Third-Party Tested &#8226; GMP Certified</text>
-              <rect x="32" y="72" width="18" height="200" rx="6" fill="rgba(255,255,255,0.15)"/>
+              <text x="100" y="175" text-anchor="middle" fill="#4ade80" font-size="15" font-weight="bold" font-family="Arial">VITAMIN</text>
+              <text x="100" y="197" text-anchor="middle" fill="#22c55e" font-size="22" font-weight="bold" font-family="Arial">K2 + D3</text>
+              <line x1="52" y1="208" x2="148" y2="208" stroke="#222" stroke-width="1"/>
+              <text x="100" y="225" text-anchor="middle" fill="#555" font-size="7.5" font-family="Arial">Bone Strength &#8226; Heart Health</text>
+              <text x="100" y="238" text-anchor="middle" fill="#555" font-size="7.5" font-family="Arial">Immune Support</text>
+              <rect x="62" y="248" width="76" height="22" rx="11" fill="#111" stroke="#22c55e" stroke-width="1.5"/>
+              <text x="100" y="263" text-anchor="middle" fill="#22c55e" font-size="9" font-weight="bold" font-family="Arial">60 CAPSULES</text>
+              <text x="100" y="308" text-anchor="middle" fill="#333" font-size="6.5" font-family="Arial">Third-Party Tested &#8226; GMP Certified</text>
+              <rect x="32" y="72" width="18" height="200" rx="6" fill="rgba(255,255,255,0.02)"/>
             </svg>
           {%- endif -%}
 
           <!-- Supplement facts -->
-          <div class="w-full bg-white rounded-2xl p-5 shadow-sm border border-green-100">
-            <div class="text-xs font-bold text-gray-700 uppercase tracking-widest mb-3 text-center">Supplement Facts</div>
+          <div class="w-full bg-black rounded-xl p-5 border border-zinc-800">
+            <div class="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-3 text-center">Supplement Facts</div>
             <div class="space-y-2">
-              <div class="flex justify-between text-xs text-gray-600 border-b border-gray-100 pb-1.5">
-                <span class="font-medium">Vitamin D3 (cholecalciferol)</span>
-                <span>5,000 IU <span class="text-gray-400">(1,250% DV)</span></span>
+              <div class="flex justify-between text-xs border-b border-zinc-800 pb-2">
+                <span class="text-zinc-400 font-medium">Vitamin D3 (cholecalciferol)</span>
+                <span class="text-white font-bold">5,000 IU <span class="text-zinc-600">(1,250% DV)</span></span>
               </div>
-              <div class="flex justify-between text-xs text-gray-600">
-                <span class="font-medium">Vitamin K2 (as MK-7)</span>
-                <span>100 mcg <span class="text-gray-400">(83% DV)</span></span>
+              <div class="flex justify-between text-xs">
+                <span class="text-zinc-400 font-medium">Vitamin K2 (as MK-7)</span>
+                <span class="text-white font-bold">100 mcg <span class="text-zinc-600">(83% DV)</span></span>
               </div>
             </div>
-            <p class="text-xs text-gray-400 mt-3">60 capsules per bottle. 2 capsules per serving, 30 servings.</p>
+            <p class="text-xs text-zinc-600 mt-3">60 capsules per bottle. 2 capsules per serving, 30 servings.</p>
           </div>
-
         </div>
       </div>
 
@@ -71,27 +68,27 @@
 
         <div class="flex items-center gap-3">
           <div class="stars text-xl">★★★★★</div>
-          <span class="text-gray-600 text-sm">4.9 / 5 &nbsp;·&nbsp; 2,400+ reviews</span>
+          <span class="text-zinc-500 text-sm">4.9 / 5 &nbsp;·&nbsp; 2,400+ reviews</span>
         </div>
 
         <div>
-          <h3 class="text-3xl font-extrabold text-gray-900">
+          <h3 class="text-3xl font-black text-white tracking-tight">
             {%- if product != blank -%}{{ product.title }}{%- else -%}NutriGlen K2 + D3{%- endif -%}
           </h3>
-          <p class="text-green-700 font-medium mt-1">60 Premium Softgels · 30-Day Supply</p>
+          <p class="text-zinc-500 font-medium mt-1">60 Premium Softgels · 30-Day Supply</p>
         </div>
 
-        <p class="text-gray-600 leading-relaxed">
-          Our premium K2 + D3 capsules deliver <strong>100 mcg of MK-7 K2</strong> and
-          <strong>5,000 IU of D3</strong> per serving — the gold-standard forms recommended by
+        <p class="text-zinc-400 leading-relaxed">
+          Our premium K2 + D3 capsules deliver <strong class="text-white">100 mcg of MK-7 K2</strong> and
+          <strong class="text-white">5,000 IU of D3</strong> per serving — the gold-standard forms recommended by
           leading nutritional researchers. Formulated with organic olive oil for optimal fat-soluble absorption.
         </p>
 
-        <ul class="space-y-2.5">
+        <ul class="space-y-3">
           {%- assign features = "MK-7 form — most bioavailable K2 available|Cholecalciferol D3 — superior to D2 for raising blood levels|Organic olive oil base for enhanced absorption|Free from gluten, soy, dairy, and artificial additives|Manufactured in an FDA-registered, GMP-certified facility" | split: "|" -%}
           {%- for feature in features -%}
-            <li class="flex items-start gap-3 text-gray-700 text-sm">
-              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+            <li class="flex items-start gap-3 text-zinc-400 text-sm">
+              <svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
               {{ feature }}
@@ -101,34 +98,30 @@
 
         <!-- Quantity + price tiers -->
         {%- assign base_price = product.price | default: 2099 -%}
-        <div class="bg-white border border-gray-200 rounded-2xl p-6 space-y-4">
-          <div class="font-semibold text-gray-900">Select Quantity</div>
+        <div class="dark-card p-6 space-y-4">
+          <div class="font-bold text-white text-sm uppercase tracking-wider">Select Quantity</div>
           <div class="grid grid-cols-3 gap-3">
-            <button class="qty-btn active rounded-xl p-3 border-2 text-center transition-all" data-qty="1">
-              <div class="font-bold text-gray-900">1×</div>
-              <div class="text-xs text-green-700 font-semibold">
-                {{ base_price | money }}
-              </div>
+            <button class="qty-btn active p-3 text-center" data-qty="1">
+              <div class="font-black text-white text-lg">1×</div>
+              <div class="text-xs text-green-400 font-semibold mt-0.5">{{ base_price | money }}</div>
             </button>
-            <button class="qty-btn rounded-xl p-3 border-2 border-gray-200 hover:border-green-300 text-center transition-all" data-qty="2">
-              <div class="font-bold text-gray-900">2×</div>
-              <div class="text-xs text-green-700 font-semibold">10% off</div>
-              <div class="text-xs text-amber-600 font-bold mt-0.5">Popular</div>
+            <button class="qty-btn p-3 text-center" data-qty="2">
+              <div class="font-black text-white text-lg">2×</div>
+              <div class="text-xs text-green-400 font-semibold mt-0.5">10% off</div>
+              <div class="text-xs text-amber-400 font-bold">Popular</div>
             </button>
-            <button class="qty-btn rounded-xl p-3 border-2 border-gray-200 hover:border-green-300 text-center transition-all" data-qty="3">
-              <div class="font-bold text-gray-900">3×</div>
-              <div class="text-xs text-green-700 font-semibold">17% off</div>
-              <div class="text-xs text-amber-600 font-bold mt-0.5">Best Value</div>
+            <button class="qty-btn p-3 text-center" data-qty="3">
+              <div class="font-black text-white text-lg">3×</div>
+              <div class="text-xs text-green-400 font-semibold mt-0.5">17% off</div>
+              <div class="text-xs text-amber-400 font-bold">Best Value</div>
             </button>
           </div>
 
-          <div class="flex items-end justify-between pt-2 border-t border-gray-100">
+          <div class="flex items-end justify-between pt-3 border-t border-zinc-800">
             <div>
-              <div class="text-sm text-gray-500">Total</div>
-              <div class="text-3xl font-extrabold text-gray-900" id="total-price">
-                {{ base_price | money }}
-              </div>
-              <div class="text-xs text-gray-400">+ free shipping on orders over $50</div>
+              <div class="text-xs text-zinc-600 uppercase tracking-wider">Total</div>
+              <div class="text-4xl font-black text-white" id="total-price">{{ base_price | money }}</div>
+              <div class="text-xs text-zinc-600 mt-1">+ free shipping on orders over $50</div>
             </div>
           </div>
         </div>
@@ -141,34 +134,27 @@
             <input type="hidden" id="variant-id" name="id" value="">
           {%- endif -%}
           <input type="hidden" id="quantity-input" name="quantity" value="1">
+          <span id="product-base-price" style="display:none" data-price="{{ base_price | divided_by: 100.0 }}"></span>
 
-          <!-- Hidden element to pass base price to JS -->
-          <span id="product-base-price" style="display:none"
-            data-price="{{ base_price | divided_by: 100.0 }}"></span>
-
-          <div class="space-y-3">
-            <button type="submit" id="atc-btn"
-              class="w-full flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold text-lg py-4 rounded-full transition-all shadow-xl hover:-translate-y-1">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.3 2.3c-.6.6-.2 1.7.7 1.7H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
-              </svg>
-              <span id="atc-label">Add to Cart — {{ base_price | money }}</span>
-            </button>
-          </div>
+          <button type="submit" id="atc-btn"
+            class="w-full btn-primary text-lg py-5 rounded-md">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.3 2.3c-.6.6-.2 1.7.7 1.7H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            <span id="atc-label">Add to Cart — {{ base_price | money }}</span>
+          </button>
         </form>
 
         <!-- Guarantee -->
-        <div class="flex items-start gap-4 bg-green-50 rounded-2xl p-5 border border-green-100">
-          <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+        <div class="flex items-start gap-4 dark-card p-5">
+          <div class="w-10 h-10 rounded-lg bg-green-400/10 flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2">
               <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
           </div>
           <div>
-            <div class="font-bold text-gray-900">30-Day Money-Back Guarantee</div>
-            <div class="text-sm text-gray-600 mt-0.5">
-              Not satisfied? Return within 30 days for a full refund — no questions asked.
-            </div>
+            <div class="font-bold text-white text-sm">30-Day Money-Back Guarantee</div>
+            <div class="text-xs text-zinc-500 mt-0.5">Not satisfied? Return within 30 days for a full refund — no questions asked.</div>
           </div>
         </div>
 
@@ -181,11 +167,7 @@
 {
   "name": "Featured Product",
   "settings": [
-    {
-      "type": "product",
-      "id": "featured_product",
-      "label": "Select Product"
-    }
+    { "type": "product", "id": "featured_product", "label": "Select Product" }
   ],
   "presets": [{ "name": "Featured Product" }]
 }
