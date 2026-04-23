@@ -4,22 +4,26 @@ const year = new Date().getFullYear();
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-400">
+    <footer style={{ background: "#001A4D" }} className="text-blue-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
           {/* Brand column */}
           <div className="col-span-2 lg:col-span-1">
             <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-green-600 flex items-center justify-center">
+              <div
+                className="w-9 h-9 rounded-full flex items-center justify-center"
+                style={{ background: "#003087" }}
+              >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-white">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z" fill="currentColor"/>
                 </svg>
               </div>
               <span className="font-bold text-xl text-white">
-                Nutri<span className="text-green-400">Glen</span>
+                Nutri<span style={{ color: "#E07820" }}>Glen</span>
               </span>
             </a>
-            <p className="text-sm text-gray-500 leading-relaxed mb-5">
+            <p className="text-sm text-blue-300 leading-relaxed mb-5">
               Premium supplements formulated with science-backed ingredients for real, measurable results.
             </p>
             {/* Social icons */}
@@ -35,7 +39,10 @@ export default function Footer() {
                   key={s.label}
                   href="#"
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-full flex items-center justify-center transition-colors"
+                  style={{ background: "rgba(255,255,255,0.08)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "#E07820")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.08)")}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d={s.d} />
@@ -51,7 +58,15 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               {["Vitamin K2 + D3", "Ingredients", "Supplement Facts", "How to Use", "Subscribe & Save"].map((l) => (
                 <li key={l}>
-                  <a href="#product" className="hover:text-green-400 transition-colors">{l}</a>
+                  <a
+                    href="#product"
+                    className="transition-colors hover:text-white"
+                    style={{ color: "#93c5fd" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "#E07820")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "#93c5fd")}
+                  >
+                    {l}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -63,7 +78,15 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               {["About NutriGlen", "Our Mission", "Quality Standards", "Press", "Careers"].map((l) => (
                 <li key={l}>
-                  <a href="#" className="hover:text-green-400 transition-colors">{l}</a>
+                  <a
+                    href="#"
+                    className="transition-colors"
+                    style={{ color: "#93c5fd" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "#E07820")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "#93c5fd")}
+                  >
+                    {l}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -81,7 +104,15 @@ export default function Footer() {
                 { label: "Privacy Policy", href: "#" },
               ].map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="hover:text-green-400 transition-colors">{l.label}</a>
+                  <a
+                    href={l.href}
+                    className="transition-colors"
+                    style={{ color: "#93c5fd" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "#E07820")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "#93c5fd")}
+                  >
+                    {l.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -93,11 +124,13 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 min-w-0 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-green-500 transition-colors"
+                  className="flex-1 min-w-0 border rounded-lg px-3 py-2 text-sm text-white placeholder-blue-400 focus:outline-none transition-colors"
+                  style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.15)" }}
                 />
                 <button
                   type="submit"
-                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="text-white px-4 py-2 rounded-lg text-sm font-medium transition-opacity hover:opacity-90"
+                  style={{ background: "#E07820" }}
                 >
                   Join
                 </button>
@@ -107,12 +140,12 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t pt-8" style={{ borderColor: "rgba(255,255,255,0.10)" }}>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-gray-600 text-center sm:text-left">
+            <p className="text-xs text-center sm:text-left" style={{ color: "#4b6cb7" }}>
               © {year} NutriGlen. All rights reserved.
             </p>
-            <p className="text-xs text-gray-700 text-center sm:text-right max-w-xl">
+            <p className="text-xs text-center sm:text-right max-w-xl" style={{ color: "#4b6cb7" }}>
               * These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
             </p>
           </div>

@@ -3,7 +3,7 @@ const reviews = [
     name: "Sarah M.",
     location: "Austin, TX",
     avatar: "SM",
-    avatarColor: "#16a34a",
+    avatarColor: "#003087",
     stars: 5,
     title: "My bones feel stronger than ever",
     body: "I started taking NutriGlen K2+D3 after my doctor mentioned my bone density was declining. After 3 months, my follow-up scan showed measurable improvement. My doctor was genuinely impressed. I tell everyone about this product now.",
@@ -14,7 +14,7 @@ const reviews = [
     name: "James R.",
     location: "Denver, CO",
     avatar: "JR",
-    avatarColor: "#d97706",
+    avatarColor: "#E07820",
     stars: 5,
     title: "Energy levels completely transformed",
     body: "I've been deficient in D3 for years. Within 3 weeks of NutriGlen I noticed I was waking up without that foggy feeling. Now 2 months in and my energy is the best it's been in a decade. The quality is clearly different from drugstore vitamins.",
@@ -25,7 +25,7 @@ const reviews = [
     name: "Linda K.",
     location: "Seattle, WA",
     avatar: "LK",
-    avatarColor: "#0891b2",
+    avatarColor: "#1d4ed8",
     stars: 5,
     title: "Heart check-up results surprised my cardiologist",
     body: "My cardiologist mentioned my arterial health markers improved significantly. I've been taking K2+D3 supplements consistently and credit NutriGlen. The formulation is clean, no fillers, and the softgels are easy to swallow.",
@@ -36,7 +36,7 @@ const reviews = [
     name: "Marcus T.",
     location: "Chicago, IL",
     avatar: "MT",
-    avatarColor: "#7c3aed",
+    avatarColor: "#001A4D",
     stars: 5,
     title: "Finally found a K2+D3 that actually works",
     body: "I tried three different brands before NutriGlen. This is the only one where I've noticed a real difference — less joint aching after workouts, better sleep, and my mood has leveled out noticeably. Worth every penny.",
@@ -47,7 +47,7 @@ const reviews = [
     name: "Anna P.",
     location: "Miami, FL",
     avatar: "AP",
-    avatarColor: "#dc2626",
+    avatarColor: "#C4651A",
     stars: 5,
     title: "My go-to supplement — reorder every month",
     body: "The shipping is fast, packaging is premium, and most importantly IT WORKS. My seasonal mood dips are gone. I also appreciate that the ingredients list is clean — MK-7 K2 and cholecalciferol D3, exactly what research recommends.",
@@ -58,7 +58,7 @@ const reviews = [
     name: "Derek W.",
     location: "Phoenix, AZ",
     avatar: "DW",
-    avatarColor: "#059669",
+    avatarColor: "#1e40af",
     stars: 5,
     title: "Skeptic turned believer",
     body: "I was skeptical about supplements but my wife convinced me to try. After bloodwork confirmed my D3 went from deficient to optimal and my calcium absorption improved, I'm a convert. The K2+D3 combination is genuinely smart science.",
@@ -72,7 +72,10 @@ export default function Testimonials() {
     <section id="reviews" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block text-green-600 font-semibold text-sm uppercase tracking-widest mb-3">
+          <span
+            className="inline-block font-semibold text-sm uppercase tracking-widest mb-3"
+            style={{ color: "#003087" }}
+          >
             Real Results
           </span>
           <div className="section-divider" />
@@ -97,7 +100,10 @@ export default function Testimonials() {
               <div className="flex items-center justify-between">
                 <div className="stars text-base">{"★".repeat(r.stars)}</div>
                 {r.verified && (
-                  <span className="flex items-center gap-1 text-xs text-green-700 bg-green-50 px-2.5 py-1 rounded-full font-medium">
+                  <span
+                    className="flex items-center gap-1 text-xs px-2.5 py-1 rounded-full font-medium"
+                    style={{ background: "#EBF4FF", color: "#003087" }}
+                  >
                     <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                     </svg>
@@ -132,7 +138,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Overall rating bar */}
+        {/* Rating breakdown */}
         <div className="mt-12 bg-white rounded-3xl shadow-sm border border-gray-100 p-8 max-w-2xl mx-auto">
           <h3 className="text-center font-bold text-gray-900 text-xl mb-6">Rating Breakdown</h3>
           {[
@@ -146,8 +152,8 @@ export default function Testimonials() {
               <span className="text-sm text-gray-600 w-8 text-right">{r.stars}★</span>
               <div className="flex-1 bg-gray-100 rounded-full h-2.5">
                 <div
-                  className="h-2.5 rounded-full bg-amber-400"
-                  style={{ width: `${r.pct}%` }}
+                  className="h-2.5 rounded-full"
+                  style={{ width: `${r.pct}%`, background: "#E07820" }}
                 />
               </div>
               <span className="text-sm text-gray-500 w-8">{r.pct}%</span>
