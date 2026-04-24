@@ -48,15 +48,20 @@ const badges = [
 
 export default function TrustBar() {
   return (
-    <section className="bg-green-900 py-8">
+    <section className="bg-white border-b border-gray-100 py-8 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {badges.map((b) => (
-            <div key={b.title} className="flex flex-col items-center text-center gap-2">
-              <div className="text-green-400">{b.icon}</div>
+            <div key={b.title} className="flex flex-col items-center text-center gap-2.5">
+              <div
+                className="w-12 h-12 rounded-full flex items-center justify-center"
+                style={{ background: "#EBF4FF", color: "#003087" }}
+              >
+                {b.icon}
+              </div>
               <div>
-                <div className="text-white font-semibold text-sm">{b.title}</div>
-                <div className="text-green-300 text-xs mt-0.5">{b.sub}</div>
+                <div className="font-semibold text-sm text-gray-900">{b.title}</div>
+                <div className="text-gray-500 text-xs mt-0.5">{b.sub}</div>
               </div>
             </div>
           ))}

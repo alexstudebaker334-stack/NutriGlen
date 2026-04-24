@@ -1,47 +1,52 @@
 <section class="hero-section">
 
-  <!-- Subtle grid texture -->
-  <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px); background-size: 40px 40px; opacity: .3;"></div>
+  <!-- Decorative blobs -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div style="position:absolute;top:-10rem;right:-10rem;width:36rem;height:36rem;border-radius:9999px;background:radial-gradient(circle,rgba(0,48,135,.07) 0%,transparent 70%);"></div>
+    <div style="position:absolute;bottom:0;left:-8rem;width:24rem;height:24rem;border-radius:9999px;background:radial-gradient(circle,rgba(224,120,32,.08) 0%,transparent 70%);"></div>
+  </div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
       <!-- Copy -->
-      <div class="space-y-8">
+      <div class="space-y-7">
 
         <!-- Eyebrow badge -->
-        <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-full px-4 py-2">
-          <span class="w-2 h-2 rounded-full bg-green-400" style="animation: pulse 2s infinite;"></span>
-          <span class="text-green-400 text-xs font-bold uppercase tracking-widest">{{ section.settings.badge_text }}</span>
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold border" style="background:#EBF4FF;border-color:#BFDBFE;color:#003087">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          {{ section.settings.badge_text }}
         </div>
 
         <!-- Headline -->
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-none tracking-tight">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
           {{ section.settings.heading_line1 }}<br>
-          <span class="text-green-400">{{ section.settings.heading_highlight }}</span><br>
-          <span class="text-zinc-500">{{ section.settings.heading_line2 }}</span>
+          <span style="color:#003087">{{ section.settings.heading_highlight }}</span><br>
+          <span style="color:#E07820">{{ section.settings.heading_line2 }}</span>
         </h1>
 
         <!-- Subheading -->
-        <p class="text-zinc-400 text-lg leading-relaxed max-w-lg">
+        <p class="text-gray-600 text-lg leading-relaxed max-w-lg">
           {{ section.settings.subheading }}
         </p>
 
         <!-- Trust badges inline -->
-        <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-zinc-500 uppercase tracking-wider">
-          <span class="flex items-center gap-1.5"><span class="text-green-400">✓</span> Third-Party Tested</span>
-          <span class="flex items-center gap-1.5"><span class="text-green-400">✓</span> Non-GMO</span>
-          <span class="flex items-center gap-1.5"><span class="text-green-400">✓</span> GMP Certified</span>
-          <span class="flex items-center gap-1.5"><span class="text-green-400">✓</span> Made in the USA</span>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+          <span class="flex items-center gap-1.5"><span class="font-bold" style="color:#003087">✓</span> Third-Party Tested</span>
+          <span class="flex items-center gap-1.5"><span class="font-bold" style="color:#003087">✓</span> Non-GMO</span>
+          <span class="flex items-center gap-1.5"><span class="font-bold" style="color:#003087">✓</span> GMP Certified</span>
+          <span class="flex items-center gap-1.5"><span class="font-bold" style="color:#003087">✓</span> Made in the USA</span>
         </div>
 
         <!-- CTAs -->
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#product" class="btn-primary text-base px-8 py-4 rounded-md">
+          <a href="#product" class="btn-primary text-base px-8 py-4">
             {{ section.settings.cta_primary }}
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#benefits" class="btn-secondary text-base px-8 py-4 rounded-md">
+          <a href="#benefits" class="btn-secondary text-base px-8 py-4">
             {{ section.settings.cta_secondary }}
           </a>
         </div>
@@ -49,14 +54,14 @@
         <!-- Social proof -->
         <div class="flex items-center gap-4 pt-2">
           <div class="flex -space-x-2.5">
-            <div class="w-9 h-9 rounded-full border-2 border-black bg-green-400 flex items-center justify-center text-xs font-bold text-black">S</div>
-            <div class="w-9 h-9 rounded-full border-2 border-black bg-green-500 flex items-center justify-center text-xs font-bold text-black">M</div>
-            <div class="w-9 h-9 rounded-full border-2 border-black bg-green-600 flex items-center justify-center text-xs font-bold text-black">J</div>
-            <div class="w-9 h-9 rounded-full border-2 border-black bg-green-700 flex items-center justify-center text-xs font-bold text-white">A</div>
+            <div class="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white" style="background:#1e40af">S</div>
+            <div class="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white" style="background:#1d4ed8">M</div>
+            <div class="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white" style="background:#2563eb">J</div>
+            <div class="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white" style="background:#3b82f6">A</div>
           </div>
           <div>
             <div class="stars text-sm">★★★★★</div>
-            <div class="text-zinc-400 text-sm"><strong class="text-white">4.9/5</strong> from 2,400+ customers</div>
+            <div class="text-gray-500 text-sm"><strong class="text-gray-900">4.9/5</strong> from 2,400+ customers</div>
           </div>
         </div>
 
@@ -64,47 +69,46 @@
 
       <!-- Bottle visual -->
       <div class="flex justify-center items-center relative">
-        <div class="absolute w-80 h-80 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(34,197,94,.12) 0%, transparent 70%);"></div>
+        <div class="absolute inset-4 rounded-3xl bg-white shadow-2xl opacity-70"></div>
 
-        <div class="relative z-10">
+        <div class="relative z-10 pt-8 pb-4">
           <svg viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg" class="w-56 sm:w-64 lg:w-72 bottle-glow drop-shadow-2xl">
-            <rect x="75" y="10" width="50" height="30" rx="6" fill="#111"/>
-            <rect x="70" y="36" width="60" height="10" rx="4" fill="#1a1a1a"/>
-            <rect x="72" y="44" width="56" height="28" rx="4" fill="#0d0d0d"/>
-            <rect x="30" y="70" width="140" height="250" rx="16" fill="#111"/>
-            <rect x="36" y="80" width="128" height="234" rx="12" fill="#0d0d0d"/>
-            <rect x="36" y="80" width="128" height="70" rx="12" fill="#16a34a"/>
-            <rect x="36" y="135" width="128" height="15" fill="#16a34a"/>
+            <rect x="75" y="10" width="50" height="30" rx="6" fill="#001A4D"/>
+            <rect x="70" y="36" width="60" height="10" rx="4" fill="#003087"/>
+            <rect x="72" y="44" width="56" height="28" rx="4" fill="#EBF4FF"/>
+            <rect x="30" y="70" width="140" height="250" rx="16" fill="#EBF4FF"/>
+            <rect x="36" y="80" width="128" height="234" rx="12" fill="white"/>
+            <rect x="36" y="80" width="128" height="70" rx="12" fill="#003087"/>
+            <rect x="36" y="135" width="128" height="15" fill="#003087"/>
             <text x="100" y="108" text-anchor="middle" fill="white" font-size="13" font-weight="bold" font-family="Arial">NutriGlen</text>
-            <rect x="60" y="113" width="80" height="1.5" fill="rgba(255,255,255,0.2)"/>
-            <text x="100" y="128" text-anchor="middle" fill="#bbf7d0" font-size="8" font-family="Arial" letter-spacing="2">PREMIUM SUPPLEMENTS</text>
-            <text x="100" y="175" text-anchor="middle" fill="#4ade80" font-size="15" font-weight="bold" font-family="Arial">VITAMIN</text>
-            <text x="100" y="200" text-anchor="middle" fill="#22c55e" font-size="24" font-weight="bold" font-family="Arial">K2 + D3</text>
-            <line x1="52" y1="210" x2="148" y2="210" stroke="#222" stroke-width="1"/>
-            <text x="100" y="228" text-anchor="middle" fill="#555" font-size="7.5" font-family="Arial">Bone Strength &#8226; Heart Health</text>
-            <text x="100" y="242" text-anchor="middle" fill="#555" font-size="7.5" font-family="Arial">Immune Support</text>
-            <rect x="62" y="252" width="76" height="22" rx="11" fill="#111" stroke="#22c55e" stroke-width="1.5"/>
-            <text x="100" y="267" text-anchor="middle" fill="#22c55e" font-size="9" font-weight="bold" font-family="Arial">60 CAPSULES</text>
-            <text x="100" y="310" text-anchor="middle" fill="#333" font-size="6.5" font-family="Arial">Third-Party Tested &#8226; GMP Certified</text>
-            <rect x="32" y="72" width="18" height="200" rx="6" fill="rgba(255,255,255,0.03)"/>
+            <rect x="60" y="113" width="80" height="1.5" fill="rgba(255,255,255,0.4)"/>
+            <text x="100" y="128" text-anchor="middle" fill="#BFDBFE" font-size="8" font-family="Arial" letter-spacing="2">PREMIUM SUPPLEMENTS</text>
+            <text x="100" y="175" text-anchor="middle" fill="#1A1A2E" font-size="15" font-weight="bold" font-family="Arial">VITAMIN</text>
+            <text x="100" y="197" text-anchor="middle" fill="#003087" font-size="22" font-weight="bold" font-family="Arial">K2 + D3</text>
+            <line x1="52" y1="208" x2="148" y2="208" stroke="#e5e7eb" stroke-width="1"/>
+            <text x="100" y="225" text-anchor="middle" fill="#6b7280" font-size="7.5" font-family="Arial">Bone Strength &#8226; Heart Health</text>
+            <text x="100" y="238" text-anchor="middle" fill="#6b7280" font-size="7.5" font-family="Arial">Immune Support</text>
+            <rect x="62" y="248" width="76" height="22" rx="11" fill="#EBF4FF" stroke="#003087" stroke-width="1.5"/>
+            <text x="100" y="263" text-anchor="middle" fill="#003087" font-size="9" font-weight="bold" font-family="Arial">60 SOFTGELS</text>
+            <rect x="36" y="290" width="128" height="24" fill="#f9fafb"/>
+            <text x="100" y="308" text-anchor="middle" fill="#9ca3af" font-size="6.5" font-family="Arial">Third-Party Tested &#8226; GMP Certified</text>
+            <rect x="32" y="72" width="18" height="200" rx="6" fill="rgba(255,255,255,0.15)"/>
           </svg>
 
           <!-- Floating stat cards -->
-          <div class="absolute -right-6 top-10 bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-center shadow-2xl">
-            <div class="text-2xl font-black text-white">30</div>
-            <div class="text-xs text-zinc-500 font-semibold leading-tight">Day<br>Guarantee</div>
+          <div class="absolute -right-6 top-12 bg-white rounded-2xl px-4 py-3 text-center shadow-xl border border-gray-100">
+            <div class="text-2xl font-extrabold" style="color:#003087">30</div>
+            <div class="text-xs text-gray-500 font-medium leading-tight">Day<br>Guarantee</div>
           </div>
-          <div class="absolute -left-6 bottom-16 bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-center shadow-2xl">
-            <div class="text-xl font-black text-green-400">★ 4.9</div>
-            <div class="text-xs text-zinc-500 font-semibold leading-tight">2,400+<br>Reviews</div>
+          <div class="absolute -left-6 bottom-12 bg-white rounded-2xl px-4 py-3 text-center shadow-xl border border-gray-100">
+            <div class="text-xl font-extrabold" style="color:#E07820">★ 4.9</div>
+            <div class="text-xs text-gray-500 font-medium leading-tight">2,400+<br>Reviews</div>
           </div>
         </div>
       </div>
 
     </div>
   </div>
-
-  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
 </section>
 
 {% schema %}
@@ -112,12 +116,12 @@
   "name": "Hero",
   "settings": [
     { "type": "text",     "id": "badge_text",        "label": "Badge text",        "default": "#1 Trusted Vitamin Supplement" },
-    { "type": "text",     "id": "heading_line1",     "label": "Heading line 1",    "default": "VITAMINS THAT" },
-    { "type": "text",     "id": "heading_highlight", "label": "Heading highlight", "default": "ACTUALLY WORK." },
-    { "type": "text",     "id": "heading_line2",     "label": "Heading line 2",    "default": "BACKED BY SCIENCE." },
-    { "type": "textarea","id": "subheading",         "label": "Subheading",        "default": "Premium Vitamin K2 (MK-7) + D3 — the gold-standard combination for bone density, heart health, and immune strength. Third-party tested, GMP certified." },
-    { "type": "text",    "id": "cta_primary",        "label": "Primary CTA",       "default": "Shop Now — $20.99" },
-    { "type": "text",    "id": "cta_secondary",      "label": "Secondary CTA",     "default": "Learn the Science" }
+    { "type": "text",     "id": "heading_line1",     "label": "Heading line 1",    "default": "Fuel Your Body With" },
+    { "type": "text",     "id": "heading_highlight", "label": "Heading highlight", "default": "K2 + D3" },
+    { "type": "text",     "id": "heading_line2",     "label": "Heading line 2",    "default": "The Power Duo" },
+    { "type": "textarea","id": "subheading",         "label": "Subheading",        "default": "Scientifically formulated Vitamin K2 (MK-7) paired with Vitamin D3 to promote bone density, heart health, and immune strength — naturally." },
+    { "type": "text",    "id": "cta_primary",        "label": "Primary CTA",       "default": "Shop Now — $39.99" },
+    { "type": "text",    "id": "cta_secondary",      "label": "Secondary CTA",     "default": "Learn More" }
   ],
   "presets": [{ "name": "Hero" }]
 }

@@ -1,23 +1,28 @@
-<section class="py-24 bg-zinc-950 relative overflow-hidden">
-  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 50% 100%, rgba(34,197,94,.08) 0%, transparent 60%);"></div>
+<section class="py-24 relative overflow-hidden" style="background:linear-gradient(150deg,#00112E 0%,#001A4D 40%,#003087 70%,#00112E 100%)">
+  <div class="absolute inset-0 pointer-events-none">
+    <div style="position:absolute;top:-5rem;left:-5rem;width:20rem;height:20rem;border-radius:9999px;background:rgba(0,48,135,.5);filter:blur(60px);"></div>
+    <div style="position:absolute;bottom:-5rem;right:-5rem;width:24rem;height:24rem;border-radius:9999px;background:rgba(224,120,32,.12);filter:blur(60px);"></div>
+  </div>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-    <span class="section-label">{{ section.settings.eyebrow }}</span>
-    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight">
+    <span class="inline-block font-semibold text-sm uppercase tracking-widest mb-4" style="color:#E07820">
+      {{ section.settings.eyebrow }}
+    </span>
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
       {{ section.settings.heading_before }}<br>
-      <span class="text-green-400">{{ section.settings.heading_highlight }}</span>
+      <span style="color:#E07820">{{ section.settings.heading_highlight }}</span>
       {{ section.settings.heading_after }}
     </h2>
-    <p class="text-zinc-500 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">{{ section.settings.subheading }}</p>
+    <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">{{ section.settings.subheading }}</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#product" class="btn-primary text-lg px-10 py-4 rounded-md">
+      <a href="#product" class="btn-primary text-lg px-10 py-4">
         {{ section.settings.cta_primary }}
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#benefits" class="btn-secondary text-lg px-10 py-4 rounded-md">
+      <a href="#benefits" class="btn-secondary text-lg px-10 py-4" style="border-color:rgba(191,219,254,.5);color:#93c5fd;background:transparent">
         {{ section.settings.cta_secondary }}
       </a>
     </div>
-    <p class="text-zinc-600 text-xs mt-8 uppercase tracking-wider">
+    <p class="text-blue-200 text-xs mt-8 uppercase tracking-wider">
       ✓ 30-Day Money-Back Guarantee &nbsp;·&nbsp; ✓ Free Shipping on Orders $50+ &nbsp;·&nbsp; ✓ Non-GMO
     </p>
   </div>
@@ -32,7 +37,7 @@
     { "type": "text",     "id": "heading_highlight", "label": "Heading highlight", "default": "Better Health" },
     { "type": "text",     "id": "heading_after",     "label": "Heading after",     "default": "Today" },
     { "type": "textarea","id": "subheading",         "label": "Subheading",        "default": "Join over 2,400 customers who have transformed their bone health, heart health, and energy levels with NutriGlen K2 + D3." },
-    { "type": "text",    "id": "cta_primary",        "label": "Primary CTA",       "default": "Shop Now — $20.99" },
+    { "type": "text",    "id": "cta_primary",        "label": "Primary CTA",       "default": "Shop Now — From $39.99" },
     { "type": "text",    "id": "cta_secondary",      "label": "Secondary CTA",     "default": "Learn the Science" }
   ],
   "presets": [{ "name": "CTA Banner" }]

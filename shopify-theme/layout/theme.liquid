@@ -15,12 +15,10 @@
 
   {{ content_for_header }}
 
-  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -30,14 +28,15 @@
             sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
           },
           colors: {
-            green: {
-              50:  '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac',
-              400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d',
-              800: '#166534', 900: '#14532d', 950: '#052e16'
+            navy: {
+              50:  '#EBF4FF',
+              100: '#DBEAFE',
+              200: '#BFDBFE',
+              300: '#93C5FD',
+              600: '#003087',
+              700: '#001A4D',
+              900: '#00112E'
             }
-          },
-          letterSpacing: {
-            widest: '.2em'
           }
         }
       }
@@ -46,7 +45,7 @@
 
   {{ 'style.css' | asset_url | stylesheet_tag }}
 </head>
-<body class="antialiased bg-black text-white font-sans">
+<body class="antialiased bg-white text-gray-900 font-sans">
 
   {% section 'header' %}
   {{ content_for_layout }}

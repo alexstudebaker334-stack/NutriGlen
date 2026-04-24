@@ -39,7 +39,10 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block text-green-600 font-semibold text-sm uppercase tracking-widest mb-3">
+          <span
+            className="inline-block font-semibold text-sm uppercase tracking-widest mb-3"
+            style={{ color: "#003087" }}
+          >
             Simple Process
           </span>
           <div className="section-divider" />
@@ -53,15 +56,23 @@ export default function HowItWorks() {
 
         <div className="relative">
           {/* Connecting line (desktop) */}
-          <div className="hidden lg:block absolute top-16 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-green-200 via-amber-200 to-green-200 z-0" />
+          <div
+            className="hidden lg:block absolute top-16 left-1/6 right-1/6 h-0.5 z-0"
+            style={{ background: "linear-gradient(90deg, #BFDBFE, #FED7AA, #BFDBFE)" }}
+          />
 
           <div className="grid lg:grid-cols-3 gap-10 relative z-10">
             {steps.map((s, i) => (
               <div key={s.num} className="flex flex-col items-center text-center gap-6">
                 {/* Step circle */}
-                <div className={`w-28 h-28 rounded-full flex flex-col items-center justify-center shadow-xl border-4 ${
-                  i === 1 ? "bg-amber-500 border-amber-200 text-white" : "bg-green-600 border-green-200 text-white"
-                }`}>
+                <div
+                  className="w-28 h-28 rounded-full flex flex-col items-center justify-center shadow-xl border-4 text-white"
+                  style={
+                    i === 1
+                      ? { background: "#E07820", borderColor: "#FED7AA" }
+                      : { background: "#003087", borderColor: "#BFDBFE" }
+                  }
+                >
                   {s.icon}
                   <span className="text-xs font-bold mt-1 opacity-80">STEP {s.num}</span>
                 </div>
@@ -76,13 +87,19 @@ export default function HowItWorks() {
         </div>
 
         {/* Science note */}
-        <div className="mt-20 bg-gradient-to-r from-green-900 to-green-800 rounded-3xl p-8 lg:p-12 grid lg:grid-cols-2 gap-8 items-center">
+        <div
+          className="mt-20 rounded-3xl p-8 lg:p-12 grid lg:grid-cols-2 gap-8 items-center"
+          style={{ background: "linear-gradient(135deg, #001A4D 0%, #003087 100%)" }}
+        >
           <div>
-            <div className="text-green-400 font-semibold text-sm uppercase tracking-widest mb-3">The Science</div>
+            <div className="font-semibold text-sm uppercase tracking-widest mb-3" style={{ color: "#E07820" }}>
+              The Science
+            </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">
-              Why K2 and D3 <span className="text-amber-400">Must Be Taken Together</span>
+              Why K2 and D3{" "}
+              <span style={{ color: "#E07820" }}>Must Be Taken Together</span>
             </h3>
-            <p className="text-green-100 leading-relaxed">
+            <p className="text-blue-100 leading-relaxed">
               Vitamin D3 dramatically increases calcium absorption in your gut. But without K2, that extra
               calcium can deposit in your arteries instead of your bones. K2 activates proteins that direct
               calcium exactly where it belongs — into bone tissue and away from soft tissue. Together, they
@@ -97,9 +114,9 @@ export default function HowItWorks() {
               { label: "Immune Activation", value: "3×", note: "faster response" },
             ].map((s) => (
               <div key={s.label} className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
-                <div className="text-2xl font-extrabold text-amber-400">{s.value}</div>
+                <div className="text-2xl font-extrabold" style={{ color: "#E07820" }}>{s.value}</div>
                 <div className="text-white text-xs font-semibold mt-1">{s.label}</div>
-                <div className="text-green-300 text-xs mt-0.5">{s.note}</div>
+                <div className="text-blue-200 text-xs mt-0.5">{s.note}</div>
               </div>
             ))}
           </div>

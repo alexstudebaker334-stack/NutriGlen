@@ -44,7 +44,10 @@ export default function FAQ() {
     <section id="faq" className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block text-green-600 font-semibold text-sm uppercase tracking-widest mb-3">
+          <span
+            className="inline-block font-semibold text-sm uppercase tracking-widest mb-3"
+            style={{ color: "#003087" }}
+          >
             Got Questions?
           </span>
           <div className="section-divider" />
@@ -60,9 +63,12 @@ export default function FAQ() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className={`rounded-2xl border transition-all duration-200 ${
-                open === i ? "border-green-200 bg-green-50/50 shadow-sm" : "border-gray-200 bg-white"
-              }`}
+              className="rounded-2xl border transition-all duration-200"
+              style={
+                open === i
+                  ? { borderColor: "#BFDBFE", background: "#F0F7FF" }
+                  : { borderColor: "#e5e7eb", background: "white" }
+              }
             >
               <button
                 className="w-full flex items-center justify-between text-left gap-4 px-6 py-5"
@@ -71,9 +77,14 @@ export default function FAQ() {
               >
                 <span className="font-semibold text-gray-900 text-base sm:text-lg">{faq.q}</span>
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all ${
-                    open === i ? "bg-green-600 text-white rotate-45" : "bg-gray-100 text-gray-500"
+                  className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all text-white ${
+                    open === i ? "rotate-45" : ""
                   }`}
+                  style={
+                    open === i
+                      ? { background: "#003087" }
+                      : { background: "#f3f4f6", color: "#6b7280" }
+                  }
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
@@ -91,12 +102,16 @@ export default function FAQ() {
         </div>
 
         {/* Still have questions CTA */}
-        <div className="mt-12 text-center bg-green-900 rounded-3xl p-10">
+        <div
+          className="mt-12 text-center rounded-3xl p-10"
+          style={{ background: "#001A4D" }}
+        >
           <div className="text-white text-xl font-bold mb-2">Still have questions?</div>
-          <p className="text-green-200 mb-6">Our team is available 7 days a week to help you.</p>
+          <p className="text-blue-200 mb-6">Our team is available 7 days a week to help you.</p>
           <a
             href="mailto:support@nutriglenplus.com"
-            className="inline-flex items-center gap-2 bg-white text-green-900 font-bold px-8 py-3 rounded-full hover:bg-green-50 transition-colors"
+            className="inline-flex items-center gap-2 bg-white font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors"
+            style={{ color: "#003087" }}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>

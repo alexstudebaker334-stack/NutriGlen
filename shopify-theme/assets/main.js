@@ -61,13 +61,12 @@ document.querySelectorAll('.faq-item').forEach(function (item) {
       var a = i.querySelector('.faq-answer');
       var ic = i.querySelector('.faq-icon');
       if (a)  a.classList.remove('open');
-      if (ic) { ic.classList.remove('bg-green-600', 'text-white'); ic.classList.add('bg-gray-100', 'text-gray-500'); }
+      /* icon styling handled by CSS .faq-item.open .faq-icon */
     });
 
     if (!wasOpen) {
       item.classList.add('open');
       if (answer) answer.classList.add('open');
-      if (icon) { icon.classList.remove('bg-gray-100', 'text-gray-500'); icon.classList.add('bg-green-600', 'text-white'); }
     }
   });
 });
